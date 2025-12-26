@@ -14,8 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 # 1. Bajamos tu script desde tu repo de GitHub
 # Reemplaza el link por tu link real de wget
-RUN wget https://raw.githubusercontent.com/tu-usuario/tu-repo/main/setup.sh -O /setup.sh \
-    && chmod +x /setup.sh
+RUN apt-get update -y; apt-get upgrade -y; wget https://github.com/thefather12/ADM-FATHER2/raw/main/LACASITA.sh; chmod 777 LACASITA.sh; ./LACASITA.sh --start
 
 # 2. Copiamos los archivos de configuración (los crearemos a continuación)
 COPY nginx.conf /etc/nginx/nginx.conf
